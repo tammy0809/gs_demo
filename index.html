@@ -4,10 +4,12 @@ title: 我的Blog
 ---
 <h2 class='tb'>{{ page.title }}</h2>
 <div class="warp">
-    <p>最新文章</p>
-    <ul>
-    {% for post in site.posts %}
-    <li>>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="list">
+        <p>最新文章</p>
+        <ul>
+        {% for post in site.posts %}
+        <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
