@@ -2,15 +2,12 @@
 layout: default
 title: 我的Blog
 ---
-<style>
-*{margin:0;padding:0}
-body{}
-.h1{text-align:center;background:#000;color:#fff;} 
-</style>
-<h2 class='h1'>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-{% for post in site.posts %}
-<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+<h2 class='tb'>{{ page.title }}</h2>
+<div class="warp">
+    <p>最新文章</p>
+    <ul>
+    {% for post in site.posts %}
+    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
